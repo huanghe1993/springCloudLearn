@@ -1,0 +1,5 @@
+# Project exclude paths
+/microservice-cloud-02-api/target/
+/microservice-cloud-03-provider-product-8001/target/
+/microservice-cloud-05-eureka-6001/target/
+/microservice-cloud-05-eureka-6002/target/

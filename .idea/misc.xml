@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/microservice-cloud-01/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-cloud-02-api/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-cloud-03-provider-product-8001/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-cloud-04-consumer-product-80/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-cloud-05-eureka-6001/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
