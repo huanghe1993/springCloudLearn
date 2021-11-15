@@ -1,0 +1,43 @@
+server:
+  port: 8081
+spring:
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    # 生产者配置
+    producer:
+      # 设置大于0的值，则客户端会发送失败的记录重新发送,默认的间隔时间是100ms,重试保证消息的可靠性，但是也可能造成消息的重复发送
+      retries: 3
+      # 多副本之间的leader收到消息，并把消息写入到本地的log中，才会返回ack给生产者，性能和安全性是均衡的。
+      acks: 1
+      # key的序列化
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # value的序列化
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # kafka本地线程会从缓冲区取数据，批量发送到broker。设置批量发送消息的大小，默认值是16384，即是16k,就是说一个batch满了16kb就发送出去
+      batch-size: 16384
+      # 设置发送消息的本地缓冲区，如果设置了缓冲区，消息会先发送到本地缓冲区，可以提高发送的性能，默认值是33554432，即是32MB
+      buffer-memory: 33554432
+      # 说这个消息发送完后会进入到本地的一个batch，如果10ms内，这个batch满了16kb,就会随着batch一起发送出去，
+      # 如果10ms内，batch没有满16kb，那么也必须把消息发送出去，不能让消息的时间延时太长
+      # linger.ms为0表示每接收到一条消息就提交给kafka,这时候batch-size其实就没用了
+      properties:
+        linger.ms: 10
+    # 消费者配置
+    consumer:
+      # 默认的消费组ID
+      group-id: default-group
+      # 是否自动提交offset
+      # 自动提交offset：消费者在拉取 poll 消息之后，会自动的向broker的_consumer_offsets主题提交当前主题-分区消费的偏移量。
+      # 手动提交offset：消费者在消费消息时/后，再提交offset
+      enable-auto-commit: false
+      # 当kafka中没有初始offset或offset超出范围时将自动重置offset
+      # earliest:重置为分区中最小的offset;
+      # latest:重置为分区中最新的offset(消费分区中新产生的数据);
+      # none:只要有一个分区不存在已提交的offset,就抛出异常;
+      auto-offset-reset: earliest
+      # 一次poll最大拉取消息的条数，可以根据消费速度的快慢来设置
+      max-poll-records: 500
+      # key的反序列化
+      key-deserializer: org.apache.kafka.common.serialization.StringSerializer
+      # value的反序列化
+      value-deserializer: org.apache.kafka.common.serialization.StringSerializer
