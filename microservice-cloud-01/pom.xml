@@ -14,6 +14,8 @@
         <module>../microservice-cloud-04-consumer-product-80</module>
         <module>../microservice-cloud-05-eureka-6001</module>
         <module>../microservice-cloud-05-eureka-6002</module>
+        <module>../microservice-cloud-stream-consumer1</module>
+        <module>../microservice-cloud-stream-consumer2</module>
     </modules>
     <packaging>pom</packaging>
 
