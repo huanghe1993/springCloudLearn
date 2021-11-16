@@ -7,9 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="microservice-cloud-05-eureka-6002" />
-        <module name="microservice-cloud-02-api" />
         <module name="microservice-cloud-05-eureka-6001" />
         <module name="microservice-cloud-04-consumer-product-80" />
+        <module name="microservice_cloud_stream_producer" />
+        <module name="microservice-cloud-stream-consumer2" />
+        <module name="microservice-cloud-stream-consumer1" />
+        <module name="microservice-cloud-02-api" />
         <module name="microservice-cloud-03-provider-product-8001" />
       </profile>
     </annotationProcessing>
@@ -20,6 +23,9 @@
       <module name="microservice-cloud-04-consumer-product-80" target="1.8" />
       <module name="microservice-cloud-05-eureka-6001" target="1.8" />
       <module name="microservice-cloud-05-eureka-6002" target="1.8" />
+      <module name="microservice-cloud-stream-consumer1" target="1.8" />
+      <module name="microservice-cloud-stream-consumer2" target="1.8" />
+      <module name="microservice_cloud_stream_producer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -28,6 +34,9 @@
       <module name="microservice-cloud-04-consumer-product-80" options="-parameters" />
       <module name="microservice-cloud-05-eureka-6001" options="-parameters" />
       <module name="microservice-cloud-05-eureka-6002" options="-parameters" />
+      <module name="microservice-cloud-stream-consumer1" options="-parameters" />
+      <module name="microservice-cloud-stream-consumer2" options="-parameters" />
+      <module name="microservice_cloud_stream_producer" options="-parameters" />
     </option>
   </component>
 </project>

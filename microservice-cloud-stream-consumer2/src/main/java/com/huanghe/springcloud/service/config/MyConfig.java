@@ -12,7 +12,7 @@ public class MyConfig {
 
     @Bean
     public MyConfig genMyConfig(){
-        System.out.println("demo");
+        System.out.println("demo mydemo");
         return new MyConfig();
     }
 }

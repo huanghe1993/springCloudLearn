@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/microservice-cloud-03-provider-product-8001/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-cloud-04-consumer-product-80/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-cloud-05-eureka-6001/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice_cloud_stream_producer/pom.xml" />
       </list>
     </option>
   </component>

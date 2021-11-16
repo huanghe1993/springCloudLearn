@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/microservice-cloud-04-consumer-product-80/microservice-cloud-04-consumer-product-80.iml" filepath="$PROJECT_DIR$/microservice-cloud-04-consumer-product-80/microservice-cloud-04-consumer-product-80.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-cloud-05-eureka-6001/microservice-cloud-05-eureka-6001.iml" filepath="$PROJECT_DIR$/microservice-cloud-05-eureka-6001/microservice-cloud-05-eureka-6001.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-cloud-05-eureka-6002/microservice-cloud-05-eureka-6002.iml" filepath="$PROJECT_DIR$/microservice-cloud-05-eureka-6002/microservice-cloud-05-eureka-6002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-cloud-stream-consumer1/microservice-cloud-stream-consumer1.iml" filepath="$PROJECT_DIR$/microservice-cloud-stream-consumer1/microservice-cloud-stream-consumer1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-cloud-stream-consumer2/microservice-cloud-stream-consumer2.iml" filepath="$PROJECT_DIR$/microservice-cloud-stream-consumer2/microservice-cloud-stream-consumer2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice_cloud_stream_producer/microservice_cloud_stream_producer.iml" filepath="$PROJECT_DIR$/microservice_cloud_stream_producer/microservice_cloud_stream_producer.iml" />
     </modules>
   </component>
 </project>

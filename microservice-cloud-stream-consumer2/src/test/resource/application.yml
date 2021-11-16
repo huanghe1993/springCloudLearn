@@ -1,6 +1,8 @@
 server:
   port: 8081
 spring:
+  profiles:
+    active: junit
   kafka:
     bootstrap-servers: 127.0.0.1:9092
     # 生产者配置
