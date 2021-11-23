@@ -10,7 +10,7 @@ import org.springframework.context.annotation.FilterType;
 @ComponentScan(
         basePackages = {"com.huanghe.springcloud.service"},
         excludeFilters = {
-                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = {MyConfig.class})
+                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = {StarterApplication.class, MyConfig.class})
         })
 public class TestApplication {
     public static void main(String[] args) {
