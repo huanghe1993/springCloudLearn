@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="microservice-cloud-08-eureka-https02" />
         <module name="microservice-cloud-05-eureka-6002" />
         <module name="microservice-cloud-05-eureka-6001" />
+        <module name="microservice-cloud-06-eureka-https" />
+        <module name="microservice-cloud-07-https-client" />
         <module name="microservice-cloud-04-consumer-product-80" />
         <module name="microservice_cloud_stream_producer" />
         <module name="microservice-cloud-stream-consumer2" />
@@ -23,6 +26,9 @@
       <module name="microservice-cloud-04-consumer-product-80" target="1.8" />
       <module name="microservice-cloud-05-eureka-6001" target="1.8" />
       <module name="microservice-cloud-05-eureka-6002" target="1.8" />
+      <module name="microservice-cloud-06-eureka-https" target="1.8" />
+      <module name="microservice-cloud-07-https-client" target="1.8" />
+      <module name="microservice-cloud-08-eureka-https02" target="1.8" />
       <module name="microservice-cloud-stream-consumer1" target="1.8" />
       <module name="microservice-cloud-stream-consumer2" target="1.8" />
       <module name="microservice_cloud_stream_producer" target="1.8" />
@@ -34,6 +40,9 @@
       <module name="microservice-cloud-04-consumer-product-80" options="-parameters" />
       <module name="microservice-cloud-05-eureka-6001" options="-parameters" />
       <module name="microservice-cloud-05-eureka-6002" options="-parameters" />
+      <module name="microservice-cloud-06-eureka-https" options="-parameters" />
+      <module name="microservice-cloud-07-https-client" options="-parameters" />
+      <module name="microservice-cloud-08-eureka-https02" options="-parameters" />
       <module name="microservice-cloud-stream-consumer1" options="-parameters" />
       <module name="microservice-cloud-stream-consumer2" options="-parameters" />
       <module name="microservice_cloud_stream_producer" options="-parameters" />

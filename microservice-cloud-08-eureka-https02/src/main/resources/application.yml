@@ -1,0 +1,25 @@
+server:
+  port: 1113
+  ssl:
+    enabled: true
+    key-store: classpath:codesheepserver.p12
+    key-store-password: codesheep.cn
+    key-store-type: PKCS12
+    key-alias: server
+
+eureka:
+  instance:
+    hostname: localhost
+    securePort: 1113
+    securePortEnabled: true
+    nonSecurePortEnabled: false
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:    # Eureka客户端与Eureka服务端的交互地址，集群版配置对方的地址，单机版配置自己（如果不配置则默认本机8761端口）
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      #集群版
+      defaultZone: https://localhost:1111/eureka/
+ssl:
+  key-store: codesheepclient.p12
+  key-store-password: codesheep.cn

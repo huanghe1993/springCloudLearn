@@ -1,0 +1,13 @@
+server:
+  port: 1112
+spring:
+  application:
+    name: eureka-client
+eureka:
+  client:
+    securePortEnabled: true
+    serviceUrl:
+      defaultZone: https://localhost:1113/eureka/,https://localhost:1111/eureka/
+ssl:
+  key-store: codesheepclient.p12
+  key-store-password: codesheep.cn

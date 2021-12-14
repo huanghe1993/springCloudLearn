@@ -6,6 +6,9 @@
     <file url="file://$PROJECT_DIR$/microservice-cloud-04-consumer-product-80/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-cloud-05-eureka-6001/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-cloud-05-eureka-6002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-cloud-06-eureka-https/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-cloud-07-https-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-cloud-08-eureka-https02/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-cloud-stream-consumer1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-cloud-stream-consumer2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice_cloud_stream_producer/src/main/java" charset="UTF-8" />
