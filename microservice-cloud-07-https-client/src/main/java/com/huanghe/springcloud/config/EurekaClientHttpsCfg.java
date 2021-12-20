@@ -17,12 +17,27 @@ import java.security.cert.CertificateException;
 @Configuration
 public class EurekaClientHttpsCfg {
 
+    @Value("${ssl.trust-store}")
+    String trustStoreFileName;
+
+    @Value("${ssl.trust-store-password}")
+    String trustStorePassword;
+
     @Value("${ssl.key-store}")
     String keyStoreFileName;
 
     @Value("${ssl.key-store-password}")
     String keyStorePassword;
 
+    /**
+     * 客户端端与Eureka服务端进行通信的，客户端信任服务端
+     * @return
+     * @throws CertificateException CertificateException
+     * @throws NoSuchAlgorithmException NoSuchAlgorithmException
+     * @throws KeyStoreException KeyStoreException
+     * @throws IOException IOException
+     * @throws KeyManagementException KeyManagementException
+     */
     @Bean
     public DiscoveryClient.DiscoveryClientOptionalArgs discoveryClientOptionalArgs() throws CertificateException, NoSuchAlgorithmException, KeyStoreException, IOException, KeyManagementException {
         EurekaJerseyClientImpl.EurekaJerseyClientBuilder builder = new EurekaJerseyClientImpl.EurekaJerseyClientBuilder();
@@ -30,7 +45,7 @@ public class EurekaClientHttpsCfg {
         SSLContext sslContext = new SSLContextBuilder()
                 .loadTrustMaterial(
                         this.getClass().getClassLoader().getResource(keyStoreFileName),keyStorePassword.toCharArray()
-                )
+                ).loadKeyMaterial(this.getClass().getClassLoader().getResource(keyStoreFileName),keyStorePassword.toCharArray())
                 .build();
         builder.withCustomSSL(sslContext);
 
