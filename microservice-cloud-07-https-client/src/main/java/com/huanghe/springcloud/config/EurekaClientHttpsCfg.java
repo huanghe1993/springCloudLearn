@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
+import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
 
 @Configuration
@@ -31,21 +32,22 @@ public class EurekaClientHttpsCfg {
 
     /**
      * 客户端端与Eureka服务端进行通信的，客户端信任服务端
+     *
      * @return
-     * @throws CertificateException CertificateException
+     * @throws CertificateException     CertificateException
      * @throws NoSuchAlgorithmException NoSuchAlgorithmException
-     * @throws KeyStoreException KeyStoreException
-     * @throws IOException IOException
-     * @throws KeyManagementException KeyManagementException
+     * @throws KeyStoreException        KeyStoreException
+     * @throws IOException              IOException
+     * @throws KeyManagementException   KeyManagementException
      */
     @Bean
-    public DiscoveryClient.DiscoveryClientOptionalArgs discoveryClientOptionalArgs() throws CertificateException, NoSuchAlgorithmException, KeyStoreException, IOException, KeyManagementException {
+    public DiscoveryClient.DiscoveryClientOptionalArgs discoveryClientOptionalArgs() throws CertificateException, NoSuchAlgorithmException, KeyStoreException, IOException, KeyManagementException, UnrecoverableKeyException {
         EurekaJerseyClientImpl.EurekaJerseyClientBuilder builder = new EurekaJerseyClientImpl.EurekaJerseyClientBuilder();
         builder.withClientName("eureka-client");
         SSLContext sslContext = new SSLContextBuilder()
                 .loadTrustMaterial(
-                        this.getClass().getClassLoader().getResource(keyStoreFileName),keyStorePassword.toCharArray()
-                ).loadKeyMaterial(this.getClass().getClassLoader().getResource(keyStoreFileName),keyStorePassword.toCharArray())
+                        this.getClass().getClassLoader().getResource(trustStoreFileName), trustStorePassword.toCharArray()
+                ).loadKeyMaterial(this.getClass().getClassLoader().getResource(keyStoreFileName), keyStorePassword.toCharArray(), keyStorePassword.toCharArray())
                 .build();
         builder.withCustomSSL(sslContext);
 

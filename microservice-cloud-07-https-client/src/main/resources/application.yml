@@ -11,5 +11,5 @@ eureka:
 ssl:
   trust-store: codesheepclient.p12
   trust-store-password: codesheep.cn
-  key-store: classpath:codesheepclient.p12
+  key-store: codesheepclient.p12
   key-store-password: codesheep.cn
