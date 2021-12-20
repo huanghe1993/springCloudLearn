@@ -32,6 +32,7 @@ import java.util.Set;
 
 /**
  * https://blog.csdn.net/gzt19881123/article/details/109333230
+ * EurekaServerAutoConfiguration
  */
 @Component
 public class EurekaServerConfig extends PeerEurekaNodes{
