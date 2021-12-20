@@ -14,6 +14,8 @@ server:
     trust-store: classpath:codesheepserver.p12
     trust-store-type: PKCS12
     trust-store-password: codesheep.cn
+  servlet:
+    context-path: /register
 
 eureka:
   instance:
