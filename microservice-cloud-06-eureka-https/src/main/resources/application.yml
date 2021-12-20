@@ -11,7 +11,7 @@ server:
     # 2. 导出客户端公钥sslClient.cer 文件
     # 3. 将客户端公钥导入服务端证书库 slClient.cer 导入到服务端证书
     client-auth: need
-    trust-store: classpath:codesheepserver.p12
+    trust-store: classpath:codesheepclient.p12
     trust-store-type: PKCS12
     trust-store-password: codesheep.cn
   servlet:
@@ -19,7 +19,7 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: discovery1
     securePort: 1111
     securePortEnabled: true
     nonSecurePortEnabled: false
@@ -29,7 +29,7 @@ eureka:
     serviceUrl:    # Eureka客户端与Eureka服务端的交互地址，集群版配置对方的地址，单机版配置自己（如果不配置则默认本机8761端口）
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       #集群版
-      defaultZone: https://localhost:1113/eureka/
+      defaultZone: https://discovery2:1113/register/eureka/
 ssl:
   key-store: codesheepclient.p12
   key-store-password: codesheep.cn

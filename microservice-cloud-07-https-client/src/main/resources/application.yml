@@ -7,9 +7,9 @@ eureka:
   client:
     securePortEnabled: true
     serviceUrl:
-      defaultZone: https://localhost:1113/register/eureka/,https://localhost:1111/register/eureka/
+      defaultZone: https://discovery2:1113/register/eureka/,https://discovery1:1111/register/eureka/
 ssl:
   trust-store: codesheepclient.p12
   trust-store-password: codesheep.cn
-  key-store: codesheepclient.p12
+  key-store: codesheepserver.p12
   key-store-password: codesheep.cn
